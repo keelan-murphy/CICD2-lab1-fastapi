@@ -10,15 +10,15 @@ jobs:
 
       steps:
         - name: Check out repo
-        uses: actions/checkoutv4
+          uses: actions/checkout@v4
 
-      - name: Setup python
-      uses: actions/setup-pythonv5
-      with:
-        pyhton-version: "3.11"
+        - name: Setup python
+          uses: actions/setup-python@v5
+          with:
+            python-version: "3.11"
 
-      - name: Run requirements
-        run: pip install -r requirements.txt
+        - name: Run requirements
+          run: pip install -r requirements.txt
 
-      - name: Run tests and coverage
-        run: python -m pytest python -m pytest --cov=app --cov-report=term-missing
+        - name: Run tests and coverage
+          run: python -m pytest python -m pytest --cov=app --cov-report=term-missing

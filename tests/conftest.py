@@ -39,6 +39,6 @@ def reset_database():
     yield 
     Base.metadata.drop_all(bind=test_engine) 
 
-    @pytest.fixture 
+@pytest.fixture 
 def client(): 
-    return TestClient(app): 
+    return TestClient(app)

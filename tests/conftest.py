@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool 
  
 from app.database import get_db 
-from product_service.main import app 
+from app.main import app 
 from app.models import Base 
  
  
